@@ -4,10 +4,11 @@
 
 \begin{document}
  \section{Exercise 1.13}
+ まず
  \begin{equation}
   \rm{Fib}(n) = \dfrac{\phi^n-\psi^n}{\sqrt{5}}
  \end{equation}
- 数学的帰納法で証明する
+ を数学的帰納法で証明する
 
  $n=1$ のとき
  \begin{align}
@@ -77,7 +78,23 @@
 
  以上より，数学的帰納法から
  \begin{equation}
-  \rm{Fib}(n) = \dfrac{\phi^k - \psi^k}{\sqrt5}
+  \rm{Fib}(n) = \dfrac{\phi^n - \psi^n}{\sqrt5}
  \end{equation}
  が成り立つことを証明した．
+
+ 次に
+ \begin{equation}
+  \psi = \dfrac{1 - \sqrt5}2 \sim \dfrac{1 - 2.23606797749979}2 \sim
+   -0.618033988749895
+ \end{equation}
+ より
+ \begin{equation}
+  \lim_{n\to\infty}\psi^n = 0
+ \end{equation}
+ となるので，
+ \begin{equation}
+  \rm{Fib}(n) = \dfrac{\phi^n - \psi^n}{\sqrt5} \sim
+   \dfrac{\phi^n - 0}{\sqrt5} = \phi^n/\sqrt5
+ \end{equation}
+ となる
 \end{document}

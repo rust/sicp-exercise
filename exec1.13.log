@@ -1,4 +1,4 @@
-This is pTeXk, Version 3.141592-p3.1.10 (euc) (Web2C 7.5.4) (format=platex 2009.4.14)  5 AUG 2009 11:00
+This is pTeXk, Version 3.141592-p3.1.10 (euc) (Web2C 7.5.4) (format=platex 2009.4.14)  8 AUG 2009 17:29
  %&-line parsing enabled.
 **exec1.13.tex
 (./exec1.13.tex
@@ -110,7 +110,7 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
 
 [1
 
-] [2] (./exec1.13.aux) ) 
+] [2] [3] (./exec1.13.aux) ) 
 Here is how much of TeX's memory you used:
  859 strings out of 95531
  9286 string characters out of 1191153
@@ -118,6 +118,6 @@ Here is how much of TeX's memory you used:
  4084 multiletter control sequences out of 10000+50000
  9496 words of font info for 39 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
- 27i,12n,20p,204b,269s stack positions out of 30000i,500n,6000p,300000b,5000s
+ 27i,12n,20p,204b,273s stack positions out of 30000i,500n,6000p,300000b,5000s
 
-Output written on exec1.13.dvi (2 pages, 5924 bytes).
+Output written on exec1.13.dvi (3 pages, 6780 bytes).
