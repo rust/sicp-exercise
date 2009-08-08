@@ -1,0 +1,83 @@
+\documentclass{jarticle}
+
+\usepackage{amsmath}
+
+\begin{document}
+ \section{Exercise 1.13}
+ \begin{equation}
+  \rm{Fib}(n) = \dfrac{\phi^n-\psi^n}{\sqrt{5}}
+ \end{equation}
+ 数学的帰納法で証明する
+
+ $n=1$ のとき
+ \begin{align}
+  \rm{Fib}(1)
+  &= \dfrac{\phi-\psi}{\sqrt{5}} \\
+  &= \dfrac{\dfrac{1+\sqrt{5}}{2} - \dfrac{1-\sqrt{5}}{2}}{\sqrt{5}} \\
+  &= 1
+ \end{align}
+ となり成り立つ．
+
+ $n=2$ のとき
+ \begin{align}
+  \rm{Fib}(2)
+  &= \dfrac{\phi^2-\psi^2}{\sqrt{5}} \\
+  &= \dfrac{1+2\sqrt5+5 - (1-2\sqrt5+5))}{4\sqrt{5}} \\
+  &= \dfrac{4\sqrt{5}}{4\sqrt5} \\
+  &= 1
+ \end{align}
+ となり成り立つ．
+
+ $n=3$ のとき
+ \begin{align}
+  \rm{Fib}(3)
+  &= \dfrac{\phi^3 - \psi^3}{\sqrt5} \\
+  &= \dfrac{1 + 3\sqrt5 + 15 + 5\sqrt5 -
+  (1 - 3\sqrt5 + 15 - 5\sqrt5)}{8\sqrt5} \\
+  &= \dfrac{6\sqrt5 + 10\sqrt5}{8\sqrt5} \\
+  &= \dfrac{16\sqrt5}{8\sqrt5} \\
+  &= 2 = 1 + 1 = \rm{Fib}(1) + \rm{Fib}(2)
+ \end{align}
+ となり成り立つ．
+
+ $n=4$ のとき
+ \begin{align}
+  \rm{Fib}(4)
+  &= \dfrac{\phi^4 - \psi^4}{\sqrt5} \\
+  &= \dfrac{1 + 4\sqrt5 + 30 + 20\sqrt5 + 25
+  - (1 - 4\sqrt5 + 30 - 20\sqrt5 + 25)}{16\sqrt5} \\
+  &= \dfrac{8\sqrt5 + 40\sqrt5}{16\sqrt5} \\
+  &= 3 = 1 + 2 = \rm{Fib}(2) + \rm{Fib}(3)
+ \end{align}
+ となり成り立つ．
+
+ 次に $n=k, k+1$ のとき成り立つとする
+ \begin{gather}
+  \rm{Fib}(k)   = \dfrac{\phi^k - \psi^k}{\sqrt5} \\
+  \rm{Fib}(k+1) = \dfrac{\phi^{k+1} - \psi^{k+1}}{\sqrt5}
+ \end{gather}
+ $n = k + 2$ のときは
+ \begin{align}
+  \rm{Fib}(k+2) &= \dfrac{\phi^{k+1} - \psi^{k+1}}{\sqrt5}
+  + \dfrac{\phi^k - \psi^k}{\sqrt5} \\
+  &= \dfrac{\phi^{k+1} - \psi^{k+1} + \phi^k - \psi^k}{\sqrt5} \\
+  &= \dfrac{\phi^k(\phi + 1) - \psi^k(\psi + 1)}{\sqrt5}
+ \end{align}
+ ここで
+ \begin{equation}
+  \phi^2 = \phi + 1, \qquad \psi^2 = \psi + 1
+ \end{equation}
+ より
+ \begin{align}
+  \rm{Fib}(k+2) &= \dfrac{\phi^k(\phi + 1) - \psi^k(\psi + 1)}{\sqrt5} \\
+  &= \dfrac{\phi^k\phi^2 - \psi^k\psi^2}{\sqrt5} \\
+  &= \dfrac{\phi^{k+2} - \psi^{k+2}}{\sqrt{5}}
+ \end{align}
+ となり成り立つ．
+
+ 以上より，数学的帰納法から
+ \begin{equation}
+  \rm{Fib}(n) = \dfrac{\phi^k - \psi^k}{\sqrt5}
+ \end{equation}
+ が成り立つことを証明した．
+\end{document}
