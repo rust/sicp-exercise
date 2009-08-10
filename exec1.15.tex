@@ -1,0 +1,34 @@
+\documentclass{jarticle}
+
+\usepackage{amsmath}
+
+\begin{document}
+ \section{Exercise 1.13}
+
+ \begin{equation}
+  \sin x = 3\sin\dfrac{x}3 - 4\sin^3\dfrac{x}3
+ \end{equation}
+
+ $x = \dfrac{x}3 + \dfrac{x}3 + \dfrac{x}3$ であるので，加法定理より
+ \begin{align}
+  \sin x
+  &= \sin\left(\dfrac{x}3 + \dfrac{x}3 + \dfrac{x}3\right) \\
+  &= \sin\left(\left(\dfrac{x}3 + \dfrac{x}3\right) + \dfrac{x}3\right) \\
+  &= \sin\left(\dfrac{x}3 + \dfrac{x}3\right)\cos\dfrac{x}3
+  + \cos\left(\dfrac{x}3 + \dfrac{x}3\right)\sin\dfrac{x}3 \\
+  &= \sin\dfrac{x}3\cos\dfrac{x}3\cos\dfrac{x}3
+  + \cos\dfrac{x}3\sin\dfrac{x}3\cos\dfrac{x}3
+  + \cos^2\dfrac{x}3\sin\dfrac{x}3 - \sin^2\dfrac{x}3\sin\dfrac{x}3 \\
+  &= \sin\dfrac{x}3\cos^2\dfrac{x}3 + \sin\dfrac{x}3\cos^2\dfrac{x}3
+  + \sin\dfrac{x}3\cos^2\dfrac{x}3 - \sin^3\dfrac{x}3 \\
+  &= 3\sin\dfrac{x}3\cos^2\dfrac{x}3 - 3\sin^3\dfrac{x}3 \\
+  &= 3\sin\dfrac{x}3(1-\sin^2\dfrac{x}3) - 3\sin^3\dfrac{x}3 \\
+  &= 3\sin\dfrac{x}3 - 4\sin^3\dfrac{x}3
+ \end{align}
+
+ \section{加法定理}
+ \begin{gather}
+  \sin\left(x\pm y\right) = \sin x\cos y \pm \cos x\sin y \\
+  \cos\left(x\pm y\right) = \cos x\cos y \mp \sin x\sin y
+ \end{gather}
+\end{document}
