@@ -1,4 +1,4 @@
-This is pTeXk, Version 3.141592-p3.1.10 (euc) (Web2C 7.5.4) (format=platex 2009.8.10)  19 AUG 2009 19:27
+This is pTeXk, Version 3.141592-p3.1.10 (euc) (Web2C 7.5.4) (format=platex 2009.8.10)  19 AUG 2009 19:34
  %&-line parsing enabled.
 **exer1.19.tex
 (./exer1.19.tex
@@ -84,8 +84,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \mathdisplay@stack=\toks19
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
-)
-No file exer1.19.aux.
+) (./exer1.19.aux)
 \openout1 = `exer1.19.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
@@ -104,82 +103,21 @@ LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
-Missing character: There is no ^^e3 in font cmr10!
-Missing character: There is no ^^81 in font cmr10!
-Missing character: There is no ^^93 in font cmr10!
-Missing character: There is no ^^e3 in font cmr10!
-Missing character: There is no ^^82 in font cmr10!
-Missing character: There is no ^^8c in font cmr10!
-Missing character: There is no ^^e3 in font cmr10!
-Missing character: There is no ^^82 in font cmr10!
-Missing character: There is no ^^92 in font cmr10!
-Missing character: There is no ^^e3 in font cmr10!
-Missing character: There is no ^^81 in font cmr10!
-Missing character: There is no ^^9b in font cmr10!
-Missing character: There is no ^^81 in font cmr10!
-Missing character: There is no ^^8f in font cmr10!
-Missing character: There is no ^^e3 in font cmr10!
-Missing character: There is no ^^81 in font cmr10!
-Missing character: There is no ^^a8 in font cmr10!
 
-Overfull \hbox (136.4666pt too wide) in paragraph at lines 23--23
+Overfull \hbox (38.60577pt too wide) in paragraph at lines 22--22
 [] 
  []
 
-Missing character: There is no ^^e3 in font cmr10!
-Missing character: There is no ^^81 in font cmr10!
-Missing character: There is no ^^93 in font cmr10!
-Missing character: There is no ^^e3 in font cmr10!
-Missing character: There is no ^^81 in font cmr10!
-Missing character: There is no ^^93 in font cmr10!
-Missing character: There is no ^^e3 in font cmr10!
-Missing character: There is no ^^81 in font cmr10!
-Missing character: There is no ^^a7 in font cmr10!
-Missing character: There is no ^^e3 in font cmr10!
-Missing character: There is no ^^81 in font cmr10!
-Missing character: There is no ^^81 in font cmr10!
-Missing character: There is no ^^99 in font cmr10!
-Missing character: There is no ^^e3 in font cmr10!
-Missing character: There is no ^^82 in font cmr10!
-Missing character: There is no ^^8b in font cmr10!
-Missing character: There is no ^^e3 in font cmr10!
-Missing character: There is no ^^81 in font cmr10!
-Missing character: There is no ^^a8 in font cmr10!
-
-Overfull \hbox (72.87344pt too wide) in paragraph at lines 35--35
-[] 
- []
-
-Missing character: There is no ^^e3 in font cmr10!
-Missing character: There is no ^^81 in font cmr10!
-Missing character: There is no ^^9b in font cmr10!
-Missing character: There is no ^^81 in font cmr10!
-Missing character: There is no ^^8f in font cmr10!
-Missing character: There is no ^^e3 in font cmr10!
-Missing character: There is no ^^81 in font cmr10!
-Missing character: There is no ^^93 in font cmr10!
-Missing character: There is no ^^e3 in font cmr10!
-Missing character: There is no ^^81 in font cmr10!
-Missing character: There is no ^^81 in font cmr10!
-Missing character: There is no ^^8c in font cmr10!
-Missing character: There is no ^^e3 in font cmr10!
-Missing character: There is no ^^81 in font cmr10!
-Missing character: There is no ^^81 in font cmr10!
-Missing character: There is no ^^8d in font cmr10!
-Missing character: There is no ^^e3 in font cmr10!
-Missing character: There is no ^^82 in font cmr10!
-Missing character: There is no ^^8b in font cmr10!
-Missing character: There is no ^^8e in font cmr10!
 [1
 
 ] (./exer1.19.aux) ) 
 Here is how much of TeX's memory you used:
- 846 strings out of 95531
- 9118 string characters out of 1191153
- 64072 words of memory out of 1500000
+ 848 strings out of 95531
+ 9144 string characters out of 1191153
+ 64086 words of memory out of 1500000
  4075 multiletter control sequences out of 10000+50000
  7965 words of font info for 33 fonts, out of 1200000 for 2000
  14 hyphenation exceptions out of 8191
  27i,8n,20p,220b,256s stack positions out of 5000i,500n,6000p,200000b,5000s
 
-Output written on exer1.19.dvi (1 page, 2188 bytes).
+Output written on exer1.19.dvi (1 page, 2256 bytes).
