@@ -1,0 +1,185 @@
+This is pTeXk, Version 3.141592-p3.1.10 (euc) (Web2C 7.5.4) (format=platex 2009.8.10)  19 AUG 2009 19:27
+ %&-line parsing enabled.
+**exer1.19.tex
+(./exer1.19.tex
+pLaTeX2e <2006/11/10>+0 (based on LaTeX2e <2005/12/01> patch level 0)
+(/usr/share/texmf/ptex/platex/base/jarticle.cls
+Document Class: jarticle 2006/06/27 v1.6 Standard pLaTeX class
+\c@@paper=\count81
+(/usr/share/texmf/ptex/platex/base/jsize10.clo
+File: jsize10.clo 2006/06/27 v1.6 Standard pLaTeX file (size option)
+)
+\c@part=\count82
+\c@section=\count83
+\c@subsection=\count84
+\c@subsubsection=\count85
+\c@paragraph=\count86
+\c@subparagraph=\count87
+\c@figure=\count88
+\c@table=\count89
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\symmincho=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
+(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 601.
+\toclineskip=\dimen118
+\@lnumwidth=\dimen119
+\bibindent=\dimen120
+\heisei=\count90
+)
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-texlive/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks15
+\ex@=\dimen121
+))
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen122
+)
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count91
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count92
+\leftroot@=\count93
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count94
+\DOTSCASE@=\count95
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box41
+\strutbox@=\box42
+\big@size=\dimen123
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count96
+\c@MaxMatrixCols=\count97
+\dotsspace@=\muskip10
+\c@parentequation=\count98
+\dspbrk@lvl=\count99
+\tag@help=\toks16
+\row@=\count100
+\column@=\count101
+\maxfields@=\count102
+\andhelp@=\toks17
+\eqnshift@=\dimen124
+\alignsep@=\dimen125
+\tagshift@=\dimen126
+\tagwidth@=\dimen127
+\totwidth@=\dimen128
+\lineht@=\dimen129
+\@envbody=\toks18
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+No file exer1.19.aux.
+\openout1 = `exer1.19.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+Missing character: There is no ^^e3 in font cmr10!
+Missing character: There is no ^^81 in font cmr10!
+Missing character: There is no ^^93 in font cmr10!
+Missing character: There is no ^^e3 in font cmr10!
+Missing character: There is no ^^82 in font cmr10!
+Missing character: There is no ^^8c in font cmr10!
+Missing character: There is no ^^e3 in font cmr10!
+Missing character: There is no ^^82 in font cmr10!
+Missing character: There is no ^^92 in font cmr10!
+Missing character: There is no ^^e3 in font cmr10!
+Missing character: There is no ^^81 in font cmr10!
+Missing character: There is no ^^9b in font cmr10!
+Missing character: There is no ^^81 in font cmr10!
+Missing character: There is no ^^8f in font cmr10!
+Missing character: There is no ^^e3 in font cmr10!
+Missing character: There is no ^^81 in font cmr10!
+Missing character: There is no ^^a8 in font cmr10!
+
+Overfull \hbox (136.4666pt too wide) in paragraph at lines 23--23
+[] 
+ []
+
+Missing character: There is no ^^e3 in font cmr10!
+Missing character: There is no ^^81 in font cmr10!
+Missing character: There is no ^^93 in font cmr10!
+Missing character: There is no ^^e3 in font cmr10!
+Missing character: There is no ^^81 in font cmr10!
+Missing character: There is no ^^93 in font cmr10!
+Missing character: There is no ^^e3 in font cmr10!
+Missing character: There is no ^^81 in font cmr10!
+Missing character: There is no ^^a7 in font cmr10!
+Missing character: There is no ^^e3 in font cmr10!
+Missing character: There is no ^^81 in font cmr10!
+Missing character: There is no ^^81 in font cmr10!
+Missing character: There is no ^^99 in font cmr10!
+Missing character: There is no ^^e3 in font cmr10!
+Missing character: There is no ^^82 in font cmr10!
+Missing character: There is no ^^8b in font cmr10!
+Missing character: There is no ^^e3 in font cmr10!
+Missing character: There is no ^^81 in font cmr10!
+Missing character: There is no ^^a8 in font cmr10!
+
+Overfull \hbox (72.87344pt too wide) in paragraph at lines 35--35
+[] 
+ []
+
+Missing character: There is no ^^e3 in font cmr10!
+Missing character: There is no ^^81 in font cmr10!
+Missing character: There is no ^^9b in font cmr10!
+Missing character: There is no ^^81 in font cmr10!
+Missing character: There is no ^^8f in font cmr10!
+Missing character: There is no ^^e3 in font cmr10!
+Missing character: There is no ^^81 in font cmr10!
+Missing character: There is no ^^93 in font cmr10!
+Missing character: There is no ^^e3 in font cmr10!
+Missing character: There is no ^^81 in font cmr10!
+Missing character: There is no ^^81 in font cmr10!
+Missing character: There is no ^^8c in font cmr10!
+Missing character: There is no ^^e3 in font cmr10!
+Missing character: There is no ^^81 in font cmr10!
+Missing character: There is no ^^81 in font cmr10!
+Missing character: There is no ^^8d in font cmr10!
+Missing character: There is no ^^e3 in font cmr10!
+Missing character: There is no ^^82 in font cmr10!
+Missing character: There is no ^^8b in font cmr10!
+Missing character: There is no ^^8e in font cmr10!
+[1
+
+] (./exer1.19.aux) ) 
+Here is how much of TeX's memory you used:
+ 846 strings out of 95531
+ 9118 string characters out of 1191153
+ 64072 words of memory out of 1500000
+ 4075 multiletter control sequences out of 10000+50000
+ 7965 words of font info for 33 fonts, out of 1200000 for 2000
+ 14 hyphenation exceptions out of 8191
+ 27i,8n,20p,220b,256s stack positions out of 5000i,500n,6000p,200000b,5000s
+
+Output written on exer1.19.dvi (1 page, 2188 bytes).
