@@ -1,3 +1,5 @@
+;; 561
+
 (define (square x)
   (* x x ))
 (define (smallest-divisor n)
@@ -9,8 +11,6 @@
 (define (divide? a b)
   (= (remainder b a) 0))
 
-(smallest-divisor 127)
-
 (define (expmod base exp m)
   (cond ((= exp 0) 1)
         ((even? exp)
@@ -19,8 +19,6 @@
         (else
          (remainder (* base (expmod base (- exp 1) m))
                     m))))
-
-(expmod 13 4 4)
 
 (define (random x)
   (modulo (sys-random) x))
@@ -35,4 +33,14 @@
         ((fermat-test n) (fast-prime? n (- times 1)))
         (else #f)))
 
-(fast-prime? 31 10)
+(fast-prime? 561 10)
+
+(define (all-fermat-test n)
+  (fermat-test-iter n (- n 1)))
+(define (fermat-test-iter n counter)
+  (cond ((= counter 1) #f)
+        ((= (expmod counter n n) counter) #t)
+        (else (fermat-test-iter n (- counter 1)))))
+
+(all-fermat-test 561) ;; => #t
+(smallest-divisor 561) ;; => 3

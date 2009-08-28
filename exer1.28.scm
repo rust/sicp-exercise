@@ -1,16 +1,5 @@
 (define (square x)
   (* x x ))
-(define (smallest-divisor n)
-  (find-divisor n 2))
-(define (find-divisor n test-divisor)
-  (cond ((> (square test-divisor) n) n)
-        ((divide? test-divisor n ) test-divisor)
-        (else (find-divisor n (+ test-divisor 1)))))
-(define (divide? a b)
-  (= (remainder b a) 0))
-
-(smallest-divisor 127)
-
 (define (expmod base exp m)
   (cond ((= exp 0) 1)
         ((even? exp)
@@ -19,20 +8,32 @@
         (else
          (remainder (* base (expmod base (- exp 1) m))
                     m))))
-
-(expmod 13 4 4)
-
 (define (random x)
   (modulo (sys-random) x))
-
 (define (fermat-test n)
   (define (try-it a)
-    (= (expmod a n n) a))
+    (= (expmod a (- n 1) n) 1))
   (try-it (+ 1 (random (- n 1)))))
-
 (define (fast-prime? n times)
   (cond ((= times 0) #t)
         ((fermat-test n) (fast-prime? n (- times 1)))
         (else #f)))
 
-(fast-prime? 31 10)
+(define (runtime)
+  (- (time->seconds (current-time)) 1136041200))
+(define (timed-prime-test n)
+  (newline)
+  (display n)
+  (start-prime-test n (runtime)))
+(define (start-prime-test n start-time)
+  (if (fast-prime? n 100)
+      (report-prime (- (runtime) start-time))
+      #f))
+(define (report-prime elapsed-time)
+  (display " *** ")
+  (display elapsed-time)
+  #t)
+(define (search-for-primes n)
+  (if (timed-prime-test n)
+      #t
+      (search-for-primes (+ n 1))))
