@@ -22,17 +22,16 @@
 
 (expmod 13 4 4)
 
-(define (random x)
-  (modulo (sys-random) x))
-
+(use srfi-27) ;; for procedure of `random-integer`
+(random-integer 100)
 (define (fermat-test n)
   (define (try-it a)
     (= (expmod a n n) a))
-  (try-it (+ 1 (random (- n 1)))))
-
+  (try-it (+ 1 (random-integer (- n 1)))))
+;; true -> #t, false -> #f
 (define (fast-prime? n times)
   (cond ((= times 0) #t)
         ((fermat-test n) (fast-prime? n (- times 1)))
         (else #f)))
 
-(fast-prime? 31 10)
+(fast-prime? 401 1000)
