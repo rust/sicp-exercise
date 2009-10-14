@@ -1,0 +1,32 @@
+(define (add-rat x y)
+  (make-rat (+ (* (numer x) (denom y))
+               (* (numer y) (denom x)))
+            (* (denom x) (denom y))))
+(define (sub-rat x y)
+  (make-rat (- (* (numer x) (denom y))
+               (* (numer y) (denom x)))
+            (* (denom x) (denom y))))
+(define (mul-rat x y)
+  (make-rat (* (numer x) (numer y))
+            (* (denom x) (denom y))))
+(define (div-rat x y)
+  (make-rat (* (numer x) (denom y))
+            (* (denom x) (numer y))))
+(define (equal-rat? x y)
+  (= (* (numer x) (denom y))
+     (* (numer y) (denom x))))
+
+(define (make-rat n d) (cons n d))
+(define (numer x) (car x))
+(define (denom x) (cdr x))
+
+(add-rat (cons 1 2) (cons 1 3)) ;; => 5/6
+
+(define (make-rat n d)
+  (if (positive? (* n d))
+      (cons n d)
+      (cons (- (abs n)) (abs d))))
+
+(make-rat -4 6)  ;; => (-4 . 6)
+(make-rat 4 -6)  ;; => (-4 . 6)
+(make-rat 4 -16) ;; => (-4 . 16)
