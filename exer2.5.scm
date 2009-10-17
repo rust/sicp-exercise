@@ -1,0 +1,22 @@
+(define (pow a n)
+  (if (<= n 1)
+      a
+      (* a (pow a (- n 1)))))
+
+(define (exp-arithmetic-cons a b)
+  (* (pow 2 a) (pow 3 b)))
+(define (exp-arithmetic-car e)
+  (define (try n count)
+    (if (= (remainder n 2) 0)
+        (try (/ n 2) (+ count 1))
+        count))
+  (try e 0))
+(define (exp-arithmetic-cdr e)
+  (define (try n count)
+    (if (= (remainder n 3) 0)
+        (try (/ n 3) (+ count 1))
+        count))
+  (try e 0))
+
+(exp-arithmetic-car (exp-arithmetic-cons 12 14))
+(exp-arithmetic-cdr (exp-arithmetic-cons 12 14))
