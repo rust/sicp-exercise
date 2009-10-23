@@ -20,3 +20,19 @@
 (define int0 (make-interval 2.0 2.0))
 
 (div-interval int1 int0)
+
+(define int00 (make-interval 0.0 0.0))
+(div-interval int1 int00) ;; => (+inf.0 . +inf.0)
+
+(define (div-interval x y)
+  (if (or (= (upper-bound y) 0.0)
+          (= (lower-bound y) 0.0))
+      (error "divided by zero.")
+      (mul-interval x
+                    (make-interval (/ 1.0 (upper-bound y))
+                                   (/ 1.0 (lower-bound y))))))
+
+(div-interval int1 int00)
+*** ERROR: divided by zero.
+Stack Trace:
+_______________________________________
