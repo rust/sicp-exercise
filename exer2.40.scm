@@ -1,0 +1,46 @@
+(define (enumerate-interval low high)
+    (if (> low high) '() (cons low (enumerate-interval (+ low 1) high))))
+(define (flatmap proc seq)
+  (accumulate append () (map proc seq)))
+(define (unique-pairs n)
+  (flatmap
+   (lambda (i)
+     (map (lambda (j) (list j i))
+          (enumerate-interval 1 (- i 1))))
+                (enumerate-interval 1 n)))
+(define (accumulate op initial sequence)
+  (if (null? sequence)
+      initial
+      (op (car sequence)
+          (accumulate op initial (cdr sequence)))))
+
+(unique-pairs 10) ;; => ((1 2) (1 3) (2 3) (1 4) (2 4) (3 4) (1 5) (2 5) (3 5) (4 5) (1 6) (2 6) (3 6) (4 6) (5 6) (1 7) (2 7) (3 7) (4 7) (5 7) (6 7) (1 8) (2 8) (3 8) (4 8) (5 8) (6 8) (7 8) (1 9) (2 9) (3 9) (4 9) (5 9) (6 9) (7 9) (8 9) (1 10) (2 10) (3 10) (4 10) (5 10) (6 10) (7 10) (8 10) (9 10))
+
+(define (filter predicate sequence)
+  (cond ((null? sequence) ())
+        ((predicate (car sequence))
+         (cons (car sequence)
+               (filter predicate (cdr sequence))))
+        (else (filter predicate (cdr sequence)))))
+
+(define (prime-sum? pair)
+  (prime? (+ (car pair) (cadr pair))))
+(define (make-pair-sum pair)
+  (list (car pair) (cadr pair) (+ (car pair) (cadr pair))))
+(define (prime-sum-pairs n)
+  (map make-pair-sum
+       (filter prime-sum? (unique-pairs n))))
+
+(define (square x) (* x x ))
+(define (divide? a b)
+  (= (remainder b a) 0))
+(define (prime? n)
+  (= n (smallest-divisor n)))
+(define (smallest-divisor n)
+  (find-divisor n 2))
+(define (find-divisor n test-divisor)
+  (cond ((> (square test-divisor) n) n)
+        ((divide? test-divisor n ) test-divisor)
+        (else (find-divisor n (+ test-divisor 1)))))
+
+(prime-sum-pairs 6) ;; => ((1 2 3) (2 3 5) (1 4 5) (3 4 7) (2 5 7) (1 6 7) (5 6 11))
