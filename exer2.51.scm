@@ -23,7 +23,7 @@
                               (make-vect 0.0 0.0)
                               split-point
                               (make-vect 0.0 1.0)))
-          (paint-left
+          (paint-right
            (transform-painter painter2
                               split-point
                               (make-vect 1.0 0.0)
