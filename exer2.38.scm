@@ -18,3 +18,9 @@
 
 ;; fold-left と fold-right で同じ結果になる op は，たとえば + と * で，
 ;; 演算子の左右の値を入れ替えても結果が変わらないもの
+
+(fold-left list () (list 1 2 3))
+(iter (list () 1) (list 2 3))
+(iter '(() 1) '(2 3))
+(iter (list '((() 1) 2)) '(3))
+(iter (list '(((() 1) 2) 3)) '())
