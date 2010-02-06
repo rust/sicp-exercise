@@ -17,4 +17,4 @@
         (else (union-set (cdr set1)
                          (adjoin-set (car set1) set2)))))
 
-(union-set '(1 2 3 4 5) '(1 3 5 7 9))
+(union-set '(1 2 3 4 5) '(1 3 5 7 9)) ;; => (4 2 1 3 5 7 9)

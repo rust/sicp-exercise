@@ -1,7 +1,11 @@
 ;; union-set と intersection-set を書く
 (define (list->tree elements)
-  (car (partial-tree elements (length elements)))
-
+  (car (partial-tree elements (length elements))))
+(define (entry tree) (car tree))
+(define (left-branch tree) (cadr tree))
+(define (right-branch tree) (caddr tree))
+(define (make-tree entry left right)
+  (list entry left right))
 (define (partial-tree elts n)
   (if (= n 0)
       (cons '() elts)
@@ -18,7 +22,44 @@
                 (cons (make-tree this-entry left-tree right-tree)
                       remaining-elts))))))))
 
+;; tree -> list -> tree でいいのではないか
+(define (tree->list tree)
+  (define (copy-to-list tree result-list)
+    (if (null? tree)
+        result-list
+        (copy-to-list (left-branch tree)
+                      (cons (entry tree)
+                            (copy-to-list (right-branch tree)
+                                          result-list)))))
+  (copy-to-list tree '()))
+;; 前の union-set を union-list とかにする
+(define (union-list set1 set2)
+  (cond ((null? set2) set1)
+        ((null? set1) set2)
+        (else
+         (let ((x1 (car set1)) (x2 (car set2)))
+           (cond ((= x1 x2) (cons x1 (union-list (cdr set1) (cdr set2))))
+                 ((< x1 x2) (cons x1 (union-list (cdr set1) set2))) ((> x1 x2)
+                  (cons x2 (union-list set1 (cdr set2)))))))))
+
+(define (intersection-list set1 set2)
+  (if (or (null? set1) (null? set2))
+      '()
+      (let ((x1 (car set1)) (x2 (car set2)))
+        (cond ((= x1 x2) (cons x1 (intersection-list (cdr set1) (cdr set2))))
+              ((< x1 x2) (intersection-list (cdr set1) set2))
+              ((< x2 x1) (intersection-list set1 (cdr set2)))))))
+
 (define (union-set set1 set2)
-  ())
+  (list->tree (union-list (tree->list set1) (tree->list set2))))
 (define (intersection-set set1 set2)
-  ()))
+  (list->tree (intersection-list (tree->list set1) (tree->list set2))))
+
+(define tree-set1 (list->tree '(1 3 5 7 9 11)))
+(define tree-set2 (list->tree '(1 2 3 4 5 6)))
+
+(union-list '(1 3 5 7 9 11) '(1 2 3 4 5 6)) ;;=> (1 2 3 4 5 6 7 9 11)
+(union-set tree-set1 tree-set2)
+;; => (5 (2 (1 () ()) (3 () (4 () ()))) (7 (6 () ()) (9 () (11 () ()))))
+(intersection-list '(1 3 5 7 9 11) '(1 2 3 4 5 6)) ;; => (1 3 5)
+(intersection-set tree-set1 tree-set2) ;; => (3 (1 () ()) (5 () ()))
