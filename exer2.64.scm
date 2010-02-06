@@ -1,5 +1,5 @@
 (define (list->tree elements)
-  (car (partial-tree elements (length elements)))
+  (car (partial-tree elements (length elements))))
 
 (define (partial-tree elts n)
   (if (= n 0)
