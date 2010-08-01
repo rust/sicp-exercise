@@ -76,12 +76,13 @@
                     (make-leaf-set (cdr pairs))))))
 
 (define (successive-merge ordered-pairs)
-  (define (reversed-successive-merge reversed-pairs)
-    (if (null? (cdr reversed-pairs))
-        (car reversed-pairs)
-        (make-code-tree (car reversed-pairs)
-                        (reversed-successive-merge (cdr reversed-pairs)))))
-  (reversed-successive-merge (reverse ordered-pairs)))
+  (if (null? (cdr ordered-pairs))
+      (car ordered-pairs)
+      (successive-merge
+       (adjoin-set
+        (make-code-tree (car ordered-pairs)
+                        (cadr ordered-pairs))
+        (cddr ordered-pairs)))))
 
 ;; (define rock-pairs
 ;;   (list '(A 2) '(BOOM 1) '(GET 2) '(JOB 2) '(NA 16) '(SHA 3) '(YIP 9) '(WAH 1)))
@@ -90,32 +91,32 @@
 (define rock-tree (generate-huffman-tree rock-pairs))
 ((leaf na 16)
  ((leaf yip 9)
-  ((leaf Sha 3)
-   ((leaf a 2)
-    ((leaf Get 2)
-     ((leaf job 2)
-      ((leaf boom 1)
-       (leaf Wah 1)
-       (boom Wah) 2)
-      (job boom Wah) 4)
-     (Get job boom Wah) 6)
-    (a Get job boom Wah) 8)
-   (Sha a Get job boom Wah) 11)
-  (yip Sha a Get job boom Wah) 20)
- (na yip Sha a Get job boom Wah) 36)
+  (((leaf a 2)
+    ((leaf Wah 1)
+     (leaf boom 1)
+     (Wah boom) 2)
+    (a Wah boom) 4)
+   ((leaf Sha 3)
+    ((leaf job 2)
+     (leaf Get 2)
+     (job Get) 4)
+    (Sha job Get) 7)
+   (a Wah boom Sha job Get) 11)
+  (yip a Wah boom Sha job Get) 20)
+ (na yip a Wah boom Sha job Get) 36)
 
 (define rock-message
   '(Get a job
     Sha na na na na na na na na
     Get a job
     Sha na na na na na na na na
-    Wah yip yip yip yip yip yip yip yip
+    Wah yip yip yip yip yip yip yip yip yip
     Sha boom))
 (define rock-encoded-bits (encode rock-message rock-tree))
-;; => (1 1 1 1 0 1 1 1 0 1 1 1 1 1 0 1 1 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 1 1 0 1 1 1 1 1 0 1 1 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 1 0 1 1 1 1 1 1 0)
-(length rock-encoded-bits) ;; => 85
+;; => (1 1 1 1 1 1 1 0 0 1 1 1 1 0 1 1 1 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 0 0 1 1 1 1 0 1 1 1 0 0 0 0 0 0 0 0 0 1 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 1 1 0 1 1 0 1 1)
+(length rock-encoded-bits) ;; => 84
 
 ;; by 8-symbols fixed-length
 ;;   8-symbols        -> each symbol needs 3 bits
-;;   words in message -> 3 + 9 + 3 + 9 + 9 + 2 -> 35
-;;   bits             -> 35 x 3 -> 105 bits
+;;   words in message -> 3 + 9 + 3 + 9 + 10 + 2 -> 36
+;;   bits             -> 36 x 3 -> 108 bits
