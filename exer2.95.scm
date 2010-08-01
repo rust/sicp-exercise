@@ -22,6 +22,7 @@
   (if (=zero? (coeff term))
       term-list
       (cons term term-list)))
+
 (define q1 (make-poly 'x '((4 11) (3 -22) (2 18) (1 -14) (0 7))))
 (define q2 (make-poly 'x '((3 13) (2 -21) (1 81) (0 35))))
 
